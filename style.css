@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --blue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+    --hoverState: #766CF1;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--darkBlue);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--darkBlue);
+}
+
+/* ====================== Main Card =================== */
+
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--paleBlue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    max-width: 540px;
+    border-radius: 26px;
+    background-color: white;
+    filter: drop-shadow(0px 12px 100px rgba(0, 0, 0, 0.1));
+}
+
+#card img[src="images/illustration-hero.svg"]{
+    width: 100%;
+    height: 265px;
+    border-radius: 26px 26px 0px 0px;
+    background: #382AE1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 56px;
+}
+
+.article,
+.button {
+    text-align: center;
+}
+
+.article p {
+    max-width: 350px;
+    margin: 22px 0;
+    line-height: 170%;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--desaturatedBlue);
+}
+
+.plan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 29px 28px;
+    border-radius: 15px;
+    background-color: #F8F9FE;
+}
+
+.left {
+    display: flex;
+    gap: 23px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--desaturatedBlue);
+}
+
+.right a {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+button {
+    margin: 40px 0;
+    padding: 17px 0;
+    width: 420px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--blue);
+    border-radius: 14px;
+    border: none;
+    background-color: var(--brightBlue);
+    box-shadow: 0px 25px 19px rgba(56, 42, 225, 0.2);
+}
+
+.button a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+}
+
+/* ====================== Active states ======================= */
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--hoverState);
+}
+
+button:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a:hover {
+    color: var(--hoverState);
+    text-decoration: none;
+}
+
+#cancel:hover {
+    color: var(--darkBlue);
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 540px) {
+    html,
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+}
